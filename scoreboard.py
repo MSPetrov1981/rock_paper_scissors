@@ -6,9 +6,9 @@ class ScoreBoard:
         self.load_scores()
     
     def update_score(self, winner):
-        if winner == 'Игрок':
+        if winner == 'игрок':
             self.user_wins += 1
-        elif winner == 'Компьютер':
+        elif winner == 'компьютер':
             self.computer_wins += 1
         self.save_scores()
     
@@ -29,4 +29,4 @@ class ScoreBoard:
             self.user_wins = 0
             self.computer_wins = 0
         except Exception as e:
-            print(f"Ошибка загрузки счета: {e}")
+            print(f"Ошибка загрузки результатов: {e}")
