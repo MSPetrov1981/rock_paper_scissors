@@ -6,14 +6,14 @@ class ScoreBoard:
         self.load_scores()
     
     def update_score(self, winner):
-        if winner == 'user':
+        if winner == 'Игрок':
             self.user_wins += 1
-        elif winner == 'computer':
+        elif winner == 'Компьютер':
             self.computer_wins += 1
         self.save_scores()
     
     def display_score(self):
-        return f"Player: {self.user_wins} | Computer: {self.computer_wins}"
+        return f"Игрок: {self.user_wins} | Компьютер: {self.computer_wins}"
     
     def save_scores(self):
         with open(self.filename, 'w') as f:
@@ -29,4 +29,4 @@ class ScoreBoard:
             self.user_wins = 0
             self.computer_wins = 0
         except Exception as e:
-            print(f"Error loading scores: {e}")
+            print(f"Ошибка загрузки счета: {e}")
