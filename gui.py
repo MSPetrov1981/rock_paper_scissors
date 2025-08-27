@@ -10,7 +10,7 @@ class GameGUI:
         self.scoreboard = ScoreBoard()
         
         # Создание элементов интерфейса
-        self.label = tk.Label(root, text="выберите ваше оружие", font=('Arial', 14))
+        self.label = tk.Label(root, text="выберите ваш ход", font=('Arial', 14))
         self.label.pack(pady=20)
         
         self.score_label = tk.Label(root, text=self.scoreboard.display_score(), font=('Arial', 12))
@@ -35,12 +35,12 @@ class GameGUI:
         computer_choice = get_computer_choice()
         winner = determine_winner(user_choice, computer_choice)
         
-        if winner == 'Игрок':
+        if winner == 'игрок':
             result_text = f"Вы победили! Компьютер выбрал {computer_choice}"
-            self.scoreboard.update_score('Игрок')
-        elif winner == 'Компьютер':
+            self.scoreboard.update_score('игрок')
+        elif winner == 'компьютер':
             result_text = f"Вы проиграли! Компьютер выбрал {computer_choice}"
-            self.scoreboard.update_score('Компьютер')
+            self.scoreboard.update_score('компьютер')
         else:
             result_text = f"Ничья! компьютер выбрал {computer_choice}"
         
