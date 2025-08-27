@@ -19,13 +19,13 @@ class GameGUI:
         buttons_frame = tk.Frame(root)
         buttons_frame.pack(pady=20)
         
-        self.rock_btn = tk.Button(buttons_frame, text="Камень", command=lambda: self.play('rock'))
+        self.rock_btn = tk.Button(buttons_frame, text="камень", command=lambda: self.play('камень'))
         self.rock_btn.grid(row=0, column=0, padx=10)
         
-        self.paper_btn = tk.Button(buttons_frame, text="Бумага", command=lambda: self.play('paper'))
+        self.paper_btn = tk.Button(buttons_frame, text="бумага", command=lambda: self.play('бумага'))
         self.paper_btn.grid(row=0, column=1, padx=10)
         
-        self.scissors_btn = tk.Button(buttons_frame, text="Ножницы", command=lambda: self.play('scissors'))
+        self.scissors_btn = tk.Button(buttons_frame, text="ножницы", command=lambda: self.play('ножницы'))
         self.scissors_btn.grid(row=0, column=2, padx=10)
         
         self.quit_btn = tk.Button(root, text="Выход", command=root.quit)
