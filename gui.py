@@ -43,6 +43,7 @@ class GameGUI:
             self.scoreboard.update_score('компьютер')
         else:
             result_text = f"Ничья! компьютер выбрал {computer_choice}"
+            self.scoreboard.update_score ('ничья')
         
         self.score_label.config(text=self.scoreboard.display_score())
         messagebox.showinfo("Результат", result_text)
