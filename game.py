@@ -1,16 +1,16 @@
 import random
 
 def get_computer_choice():
-    return random.choice(['rock', 'paper', 'scissors'])
+    return random.choice(['камень', 'ножницы', 'бумага'])
 
 def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
-        return 'draw'
+        return 'ничья'
     winning_combinations = {
-        'rock': 'scissors',
-        'scissors': 'paper',
-        'paper': 'rock'
+        'камень': 'ножницы',
+        'ножницы': 'бумага',
+        'бумага': 'камень'
     }
     if winning_combinations[user_choice] == computer_choice:
-        return 'user'
-    return 'computer'
+        return 'игрок'
+    return 'компьютер'
